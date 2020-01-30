@@ -15,7 +15,7 @@ function pl_include_files()
 add_action( 'wp_enqueue_scripts', 'pl_include_files', 0 );
 
 
-function page_loader() {
+function clock_loader() {
 ?>
 <style>
 
@@ -47,7 +47,7 @@ if (empty($loadericon)) { echo 'plcircle'; } else { echo $loadericon; }
 </div>
 <?php
 }
-add_action( 'wp_head', 'page_loader', 0 );
+add_action( 'wp_head', 'clock_loader', 0 );
 
 include( plugin_dir_path( __FILE__ ) . 'admin.php');
 
