@@ -9,20 +9,20 @@ function pl_admin_include_files()
 }
 add_action( 'admin_enqueue_scripts', 'pl_admin_include_files' );
 
-add_action( 'admin_menu', 'page_loader_menu' );
+add_action( 'admin_menu', 'clock_loader_menu' );
 
-function page_loader_menu() {
-	add_options_page( __('Page Loader','page-loader'), __('Page Loader Setting','page-loader'), 'manage_options', 'page-loader-setting', 'page_loader_admin' );
-	add_action( 'admin_init', 'register_page_loader_settings' );
+function clock_loader_menu() {
+	add_options_page( __('Clock Loader','clock-loader'), __('Clock Loader Settings','clock-loader'), 'manage_options', 'clock-loader-setting', 'clock_loader_admin' );
+	add_action( 'admin_init', 'register_clock_loader_settings' );
 }
 
-function register_page_loader_settings() {
-	register_setting( 'page-loader-options', 'icon_color' );
-	register_setting( 'page-loader-options', 'background_color' );
-	register_setting( 'page-loader-options', 'loader_icon' );
+function register_clock_loader_settings() {
+	register_setting( 'clock-loader-options', 'icon_color' );
+	register_setting( 'clock-loader-options', 'background_color' );
+	register_setting( 'clock-loader-options', 'loader_icon' );
 }
 
-function page_loader_admin() {
+function clock_loader_admin() {
 	if ( !current_user_can( 'manage_options' ) )  {
 		wp_die( __( 'You do not have sufficient permissions to access this page.' ) );
 	}
@@ -35,8 +35,8 @@ function page_loader_admin() {
 	<p>Here you can manage options of clock Loader plugin.</p>
 	
 	<form method="post" action="options.php">
-    <?php settings_fields( 'page-loader-options' ); ?>
-    <?php do_settings_sections( 'page-loader-options' ); ?>
+    <?php settings_fields( 'clock-loader-options' ); ?>
+    <?php do_settings_sections( 'clock-loader-options' ); ?>
     <table class="form-table">
         <tr valign="top">
         <th scope="row">clock border color</th>
