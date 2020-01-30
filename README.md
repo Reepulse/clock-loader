@@ -30,6 +30,14 @@ So you can change this by activating this awesome plugin. This is a small wordpr
 
 - Then go to `installed plugins` and activate the `clock loader` plugin
 
+![install](./assets/install.gif)
+
+> cloning the repository using git (you must have git installed)
+
+![introduction](./assets/introduction.gif)
+
+> Activating the plugin
+
 ---
 
 ## Customizing
@@ -40,6 +48,10 @@ So you can change this by activating this awesome plugin. This is a small wordpr
 - Click on `settings`
 - Then click `Clock Loader Settings`
 - Customize accordingly and then press `save`
+
+![settings](./assets/settings.gif)
+
+> Customizing the plugin
 
 ---
 
